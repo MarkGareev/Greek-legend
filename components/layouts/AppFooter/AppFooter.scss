@@ -1,0 +1,119 @@
+@import "@/assets/styles/variables.scss";
+
+.footer {
+  height: 100vh;
+  max-height: 56.25vw;
+  background-color: #101010;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.563vw;
+  @media (max-width: $media) {
+    max-height: unset;
+    padding: 30px 15px 40px 15px;
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.083vw;
+    @media (max-width: $media) {
+      margin-top: unset;
+      gap: 10px;
+    }
+    &-h1 {
+      width: 18.75vw;
+      height: 9.375vw;
+      @media (max-width: $media) {
+        width: 261px;
+        height: 132px;
+      }
+      &-img {
+        padding: 1.563vw;
+        width: 100%;
+        height: 100%;
+        @media (max-width: $media) {
+          padding: 21px;
+        }
+      }
+    }
+    &-h2 {
+      text-align: center;
+      color: #b98f76;
+      @media (max-width: $media) {
+        width: 345px;
+      }
+    }
+  }
+
+  &__basement {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    color: #fff;
+    @media (max-width: $media) {
+      grid-row-end: span;
+      grid-template-columns: unset;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 40px;
+    }
+    &-lang {
+      display: flex;
+      gap: 0.208vw;
+      align-items: flex-end;
+      @media (max-width: $media) {
+        display: none;
+      }
+      &-item {
+        cursor: pointer;
+        transition: color 0.5s;
+        color: rgba(255, 255, 255, 0.4);
+        &:hover {
+          color: #fff;
+        }
+        &-active {
+          color: #fff;
+        }
+      }
+    }
+    &-info {
+      width: 13.18vw;
+      row-gap: 30px;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: $media) {
+        width: unset;
+        margin: 0 24px;
+        order: 2;
+
+        row-gap: 20px;
+        align-items: center;
+      }
+      &-p {
+        @media (max-width: $media) {
+          text-align: center;
+        }
+      }
+    }
+    &-legend {
+      min-width: 24.52vw;
+      row-gap: 30px;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: $media) {
+        min-width: unset;
+        margin: 0 24px;
+        order: 1;
+
+        row-gap: 20px;
+        align-items: center;
+      }
+      &-p {
+        @media (max-width: $media) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

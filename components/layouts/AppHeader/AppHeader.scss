@@ -1,0 +1,72 @@
+@import "@/assets/styles/variables.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.563vw;
+  height: 3.125vw;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  transition: background-color 0.5s, transform 0.5s;
+  @media (max-width: $media) {
+    height: 30px;
+    margin-top: 10px;
+    padding: 10px 15px;
+  }
+  &-hide {
+    transform: translateY(-3.13vw);
+    @media (max-width: $media) {
+      transform: translateY(-50px);
+    }
+  }
+  &__menu {
+    transition: color 1s;
+  }
+  &__logo {
+    transition: opacity 1s;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8.18vw;
+    height: 0.78vw;
+    @media (max-width: $media) {
+      width: 42.13vw;
+      height: 4vw;
+    }
+    &-img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__lang {
+    @media (max-width: $media) {
+      display: none;
+    }
+  }
+  &-hover {
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(219, 214, 213, 1);
+      }
+    }
+  }
+}
+.white {
+  color: #fff;
+}
+.black {
+  color: #101010;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}

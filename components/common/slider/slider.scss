@@ -1,0 +1,23 @@
+.swiper-pagination-bullet-active {
+  background-color: #bc8565 ;
+}
+.slider {
+  margin-top: 30px;
+  height: 470px;
+  &-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    &-h6 {
+      position: absolute;
+      left: 0;
+    }
+    &-img {
+        margin-top: 30px;
+      width: 89px;
+      height: 400px;
+    }
+  }
+}

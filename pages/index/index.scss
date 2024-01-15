@@ -1,0 +1,308 @@
+@import "@/assets/styles/variables.scss";
+.section {
+  padding: 1.563vw;
+  &-margin {
+    margin: calc(10.42vw - 1.56vw) 0;
+    padding: 0 1.563vw;
+  }
+  &:first-child {
+    padding-top: 0;
+  }
+  @media (max-width: $media) {
+    padding: 4vw;
+  }
+}
+.first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: space-between;
+  position: relative;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: $media) {
+      margin-top: 5.33vw;
+      gap: 2.67vw;
+    }
+    &-h1 {
+      width: 18.75vw;
+      height: 9.375vw;
+      @media (max-width: $media) {
+        width: 57.33vw;
+        height: 24vw;
+      }
+
+      &-img {
+        padding: 1.563vw;
+        width: 100%;
+        @media (max-width: $media) {
+          // padding: 5.6vw;
+          padding: unset;
+          height: unset;
+        }
+      }
+    }
+    &-h2 {
+      text-align: center;
+    }
+  }
+  &__backgound {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+
+    &-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 26.042vw;
+      height: 18.229vw;
+      object-fit: cover;
+      @media (max-width: $media) {
+        width: 42.67vw;
+        height: 57.07vw;
+      }
+    }
+    &-title {
+      width: 17.344vw;
+      height: 2.2vw;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @media (max-width: $media) {
+        width: 61.87vw;
+        height: 9.07vw;
+      }
+      &-h2 {
+        color: #fff;
+        line-height: 100%;
+      }
+      // &-mask {
+      //   height: 2.6vw;
+      //   width: 17.34vw;
+      //   background-color: red;
+      //   // transform: tr;
+      // }
+    }
+    &-basement {
+      position: absolute;
+      bottom: 1.563vw;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      @media (max-width: $media) {
+        bottom: 5.33vw;
+      }
+    }
+  }
+}
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media (max-width: $media) {
+    grid-template-columns: unset;
+  }
+  &__left {
+    &-img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__block {
+    @media (max-width: $media) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 24.219vw;
+    @media (max-width: $media) {
+      margin-top: 10.67vw;
+      margin-left: unset;
+      height: 190.4vw;
+    }
+    &-title {
+      margin-bottom: 1.04vw;
+      @media (max-width: $media) {
+        margin-bottom: 5.33vw;
+      }
+    }
+
+    &-img {
+      position: absolute;
+      top: 21.51vw;
+      right: 0;
+      width: 32.292vw;
+      height: 11.51vw;
+      @media (max-width: $media) {
+        top: 79.47vw;
+        right: 0;
+        width: 92vw;
+        height: 32.8vw;
+      }
+    }
+    &-link {
+      display: block;
+      margin-top: 1.04vw;
+      width: max-content;
+      @media (max-width: $media) {
+        margin-top: 9.33vw;
+      }
+    }
+  }
+}
+.products {
+  &__title {
+    margin-bottom: 2.552vw;
+  }
+  &__hr {
+    height: 1px;
+    border: none;
+    color: #000;
+    background-color: #000;
+    margin-bottom: 1.563vw;
+  }
+  &__cards {
+    display: flex;
+    height: 26.042vw;
+  }
+  &__card {
+    border-right: 0.052vw solid;
+    position: relative;
+    width: 32.292vw;
+    display: flex;
+    justify-content: space-around;
+    &:first-child {
+      .products__card-title {
+        left: 0;
+      }
+    }
+    &-title {
+      top: 0;
+      position: absolute;
+      left: 1.563vw;
+    }
+    &-img {
+      width: 5.781vw;
+      height: 100%;
+    }
+    &:last-child {
+      border-right: unset;
+    }
+  }
+}
+.families {
+  &__block {
+    &:last-child {
+      @media (max-width: $media) {
+        display: none;
+      }
+    }
+  }
+  &__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: $media) {
+      grid-template-columns: unset;
+      grid-template-rows: 92vw min-content;
+    }
+  }
+
+  &__left {
+    &-img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 48.438vw;
+      height: calc(100vh - 3.13vw);
+      object-fit: cover;
+      @media (max-width: $media) {
+        top: 0;
+        transform: unset;
+        width: 92vw;
+        height: 92vw;
+      }
+    }
+  }
+  &__right {
+    height: calc(100vh - 3.13vw);
+    margin-left: 24.219vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: $media) {
+      height: max-content;
+      margin-left: unset;
+      margin-top: 44.8vw;
+    }
+    &-title {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 9.531vw;
+      display: flex;
+      flex-direction: column;
+      gap: 0.78vw;
+      text-align: justify;
+      justify-content: center;
+      align-items: center;
+      width: 29.427vw;
+      @media (max-width: $media) {
+        top: 102.67vw;
+        left: 50%;
+        transform: translatex(-50%);
+        gap: 2.93vw;
+        right: unset;
+        width: unset;
+      }
+      &-h1 {
+        text-align: center;
+      }
+      &-h2 {
+        color: rgba(188, 133, 101, 1);
+      }
+    }
+    &-link {
+      display: block;
+      margin-top: 1.04vw;
+      width: max-content;
+      @media (max-width: $media) {
+        margin-top: 9.33vw;
+      }
+    }
+  }
+}
+.video {
+  position: relative;
+  &-text {
+    position: absolute;
+    padding: 1.563vw;
+    @media (max-width: $media) {
+      padding: 5.33vw;
+    }
+  }
+  &-img {
+    width: 100%;
+    height: 100%;
+    @media (max-width: $media) {
+      height: 92vw;
+      object-fit: cover;
+    }
+  }
+}
