@@ -205,7 +205,9 @@ onMounted(() => {
   headerStateStore.changeLogoShow(false);
   headerStateStore.changeCanHeaderChange(false);
   headerStateStore.changeColorToWhite(false);
-  animationFirst();
+  setTimeout(() => {
+    animationFirst();
+  }, 0);
   window.addEventListener("scroll", handleScroll);
   window.addEventListener("scroll", refresh);
 });

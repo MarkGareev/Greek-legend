@@ -1,1 +1,1 @@
-export const noFooterPages = ["/contacts", "/privacy-policy", "/subscribe"];
+export const noFooterPages = ["/contacts", "/privacy-policy", "/ru/subscribe"];

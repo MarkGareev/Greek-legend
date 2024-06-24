@@ -2,6 +2,8 @@
 
 .hero {
   background-image: url("@/assets/imgs/essence/main.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
   height: 350vw;
   display: flex;
   flex-direction: column;
@@ -42,7 +44,7 @@
   }
   &__basement {
     position: absolute;
-    top: 100vh;
+    top: 100lvh;
     transform: translateY(-100%) translateY(-3.125vw);
     display: flex;
     flex-direction: column;
@@ -171,7 +173,7 @@
         width: max-content;
         cursor: pointer;
         &-active {
-          color: $gold;
+          color: $brown;
         }
       }
     }

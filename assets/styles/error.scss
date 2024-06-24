@@ -6,6 +6,8 @@
   justify-content: center;
   align-items: center;
   background-image: url("@/assets/imgs/404.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
   position: relative;
   @media (max-width: $media) {
     text-align: center;
